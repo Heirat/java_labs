@@ -1,0 +1,5 @@
+java.lang.RuntimeException: java.io.FileNotFoundException: Исключение: файл не найден!
+	at task6.ExUtil.wrapToEx(ExUtil.java:9)
+	at task6.Main.main(Main.java:15)
+Caused by: java.io.FileNotFoundException: Исключение: файл не найден!
+	... 1 more
