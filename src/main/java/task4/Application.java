@@ -32,15 +32,17 @@ public class Application {
     }
 
     public void exitAction() {
-        dataHandler.saveToDataFile();
         System.out.println("Завершение работы.");
     }
 
     public void removeAction() {
         System.out.println("Введите название товара для удаления");
         readName().ifPresent(name -> {
-            dataHandler.remove(name);
-            System.out.println("Удаление успешно.");
+            if (dataHandler.remove(name)) {
+                System.out.println("Удаление успешно.");
+            } else {
+                System.out.println("Товар для удаления не найден.");
+            }
         });
     }
 
@@ -127,7 +129,7 @@ public class Application {
         System.out.println("\t1. Удалить товар");
         System.out.println("\t2. Вывести список товаров");
         System.out.println("\t3. Найти товар по наименованию");
-        System.out.println("\t4. Сохранить и выйти");
+        System.out.println("\t4. Выйти");
 
         // Возвращает элемент перечисления с индексом choiceNum
         return ActionChoice.values()[getUserChoiceNum()];

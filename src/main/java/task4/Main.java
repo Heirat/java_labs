@@ -1,11 +1,8 @@
 package task4;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class Main {
-
     private static final String DEFAULT_CONFIG_PATH = "config.txt";
 
     public static void main(String[] args) {
@@ -25,8 +22,5 @@ public class Main {
         catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
-
 }
