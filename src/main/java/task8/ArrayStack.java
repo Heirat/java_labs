@@ -29,18 +29,18 @@ public class ArrayStack<E> implements Stack<E>{
     public void push(E element) {
         if (curSize == maxSize) {
             maxSize *= 1.5;
-            System.out.println(maxSize);
+            System.out.println("New stack size = " + maxSize);
             array = Arrays.copyOf(array, maxSize);
         }
 
-        array[++curSize] = element;
+        array[curSize++] = element;
     }
 
     @Override
     public E pop() {
         if (empty())
             throw new NoSuchElementException();
-        return (E) array[curSize--];
+        return (E) array[--curSize];
     }
 
     @Override
@@ -88,7 +88,7 @@ public class ArrayStack<E> implements Stack<E>{
         public E next() {
             if (curSize == 0)
                 throw new NoSuchElementException();
-            return (E) array[curSize--];
+            return (E) array[--curSize];
         }
     }
 }

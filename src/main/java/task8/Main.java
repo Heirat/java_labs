@@ -20,6 +20,6 @@ public class Main {
         System.out.println("Popped: " + stack.pop());
         System.out.println("Popped: " + stack.pop());
         System.out.println("Popped: " + stack.pop());
-        System.out.println(stack.empty());
+        System.out.println("Is stack empty? " + stack.empty());
     }
 }
